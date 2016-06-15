@@ -1,24 +1,21 @@
 package L2_Arrays.CyclicRotation;
 /**
  * Created by sumedas on 25-Mar-16.
+ * 
+ * Rotate an array to the right by a given number of steps.
  */
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) throws IOException {
-
-        final BufferedOutputStream outputStream = new BufferedOutputStream(System.out);
-
-        final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        final StringTokenizer stringTokenizer = new StringTokenizer(reader.readLine());
-
-        outputStream.flush();
+    public int[] solution(int[] A, int K) {
+        // write your code in Java SE 8
+		int[] result = new int[A.length];
+		
+		for (int i = 0; i < A.length; i++)
+		{
+			result[ (i + K) % A.length] = A[i];
+		}
+		
+		return result;
     }
 }
