@@ -1,24 +1,17 @@
 package L3_TimeComplexity.FrogJmp;
 /**
  * Created by sumedas on 25-Mar-16.
+ *
+ * Count minimal number of jumps from position X to Y.
  */
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+ 
+ import java.math.*;
 
 public class Solution {
 
-    public static void main(String[] args) throws IOException {
-
-        final BufferedOutputStream outputStream = new BufferedOutputStream(System.out);
-
-        final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        final StringTokenizer stringTokenizer = new StringTokenizer(reader.readLine());
-
-        outputStream.flush();
+    public int solution(int X, int Y, int D) {
+        // write your code in Java SE 8
+		// Complexity: O(1)
+		return (int) Math.ceil ( ( (double) (Y - X) ) / D );
     }
 }
